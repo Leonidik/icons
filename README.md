@@ -1,7 +1,7 @@
 ## Icons project
 
 ### Backend
-virtualenv env
+virtualenv env  
 source env/bin/activate
 pip list
    pip - 20.0.2 
