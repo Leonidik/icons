@@ -44,11 +44,7 @@ reqirements.txt
    
    pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cpu  
    torch - 1.13.1+cpu  
-   torchvision - 0.14.1+cpu  
-
-
-
-    
+   torchvision - 0.14.1+cpu    
  
 ### Frontend
 virtualenv env  
