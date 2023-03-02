@@ -1,0 +1,17 @@
+{% extends 'get_image/flatpages/main.html' %}
+ 
+{% block title %}
+{% endblock title %}
+   <br>
+{% block content %}
+   <br><b>Ввод исходного изображения:</b><br><br>
+<!--   <form action="{% url 'get_image' %}" method="post"> -->
+   <form enctype="multipart/form-data" action="" method="post">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit">Ввод</button>
+    </form> 
+    <br><br>
+    <input type="button" onclick="history.back();" value="<< Назад"/>  
+   
+{% endblock content %}

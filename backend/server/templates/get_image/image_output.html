@@ -1,0 +1,49 @@
+{% extends 'get_image/flatpages/main.html' %}
+ 
+<meta charset="utf-8">
+
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+   <style>
+      img { border: 3px solid #00a8e1; }
+      table {
+         width: 900px;
+         margin:auto;}
+   </style>
+   
+   <b>Исходное изображение:</b><br>
+   <img src="http://{{server_ip}}/media/filename.jpg" width="126" height="128" alt=""> <br> 
+     
+   <b>Рекомендуемые иконки</b> <br>
+   <table>
+      <tr> <!-- Добавляем строку -->
+         {% for x in val_list %}        
+            <td>{{x}} </td>
+         {% endfor %} 
+      </tr> <!-- Закрываем HTML-тег строки -->       
+   
+      <tr> <!-- Добавляем строку -->
+         {% for x in jpg_list %}        
+            <td><img src="{{x}}" width="126" height="128" alt=""> </td>
+         {% endfor %} 
+      </tr> <!-- Закрываем HTML-тег строки -->                     
+      <tr> <!-- Добавляем строку -->
+         {% for x in svg_list %}        
+            <td><a href="{{x}}" download > Сохранить</a></td>
+         {% endfor %} 
+       </tr> <!-- Закрываем HTML-тег строки --> 
+   </table>        
+ 
+ <!--   <br><br> -->
+<!--    <a href="http://{{server_ip}}/media/icon_svg/{{image_cvg}}" download > Сохранить все</a> -->
+   
+   <br><br>
+   <input type="button" onclick="history.back();" value="<< Назад"/>  
+
+{% endblock content %}
+
+
+
+
